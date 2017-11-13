@@ -1,0 +1,25 @@
+<div>
+	{{#if responseMessage}}
+		<div class="alert alert-success">{{responseMessage}}</div>
+	{{/if}}
+
+	<div class="col-sm-12">
+		<div class="col-sm-2">
+			<label>Email Address</label>
+		</div>
+		<div class="col-sm-6">
+			{{input type="email" class="form-control" placeholder="Your email address" value=emailAddress}}
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<div class="col-sm-2">
+			<label>Message</label>
+		</div>
+		<div class="col-sm-6">
+			{{textarea class="form-control" placeholder="Your message" rows=7 value=message}}
+		</div>
+	</div>
+	<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
+		<button class="btn btn-primary btn-block" {{action "showFormData"}} disabled={{isDisabled}}>Send message</button>
+	</div>
+</div>
